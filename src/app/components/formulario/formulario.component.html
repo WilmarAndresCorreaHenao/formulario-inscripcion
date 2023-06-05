@@ -4,7 +4,7 @@
   <div class="" *ngSwitchCase="0">
     <!-- Contenido del primer paso -->
     <div class="form-group">
-      <label for="nombre">Nombre</label>
+      <label for="nombre">Este formulario registrará su nombre, escriba su nombre:</label>
       <input type="text" class="form-control" id="nombre" formControlName="nombre">
     </div>
 
@@ -13,7 +13,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="tipoProveedor">Tipo de Proveedor</label>
+          <label for="tipoPersona">Tipo de Persona:</label>
           <select class="form-control" id="tipoProveedor" formControlName="tipoProveedor">
             <option value="natural">Natural</option>
             <option value="juridica">Jurídica</option>
@@ -25,7 +25,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="CategoriaTributaria">Categoría Tributaria</label>
+          <label for="CategoriaTributaria">Categoría Tributaria:</label>
           <select class="form-control" formControlName="CategoriaTributaria">
             <option value="Declarante">Declarante</option>
             <option value="AgenteRetenedor">Agente Retenedor</option>
@@ -40,10 +40,18 @@
   <!-- Contenido del segundo paso -->
   <div *ngSwitchCase="1">
     <div class="row justify-content-center">
+
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="tipoProveedor">Actividad Económica (Solo ingrese Números)</label>
-          <select class="form-control" id="actividadEconomica " formControlName="tipoProveedor">
+          <label for="actividadEconomica">Actividad Económica (Solo ingrese Números):</label>
+          <input type="text" class="form-control" id="actividadEconomica" formControlName="actividadEconomica">
+        </div>
+      </div>
+
+      <div class="col-md-6 mx-auto">
+        <div class="form-group">
+          <label for="tipoDocumento">Tipo de Documento:</label>
+          <select class="form-control" id="tipoDocumento " formControlName="tipoDocumento">
             <option value="nit">NIT.</option>
             <option value="cedula">CC.</option>
             <option value="cedulaExtranjeria">CE.</option>
@@ -56,7 +64,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="numeroDeDocumento">Número de documento (si es NIT sin punto y con digito de verificación)</label>
+          <label for="numeroDeDocumento">Número de documento: (si es NIT sin punto y con digito de verificación)</label>
           <input type="text" class="form-control" id="numeroDeDocumento" formControlName="numeroDeDocumento">
         </div>
       </div>
@@ -65,8 +73,17 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
+          <label for="figuraRUT">Nombre y Apellidos completos ó Razón Social (Cómo figura en el RUT)</label>
+          <input type="text" class="form-control" id="figuraRUT" formControlName="figuraRUT">
+        </div>
+      </div>
+
+      <br>
+
+      <div class="col-md-6 mx-auto">
+        <div class="form-group">
           <label for="nombresApellidosCompletosDelRepresentanteLegal">Si es razón social, por favor indique Nombres y Apellidos completos del Representante Legal,
-            en caso contrario colocar N/A</label>
+            en caso contrario colocar N/A:</label>
           <input type="text" class="form-control" id="nombresApellidosCompletosDelRepresentanteLegal" formControlName="nombresApellidosCompletosDelRepresentanteLegal">
         </div>
       </div>
@@ -81,7 +98,7 @@
       <div class="col-md-6 mx-auto">
         <div class="form-group">
           <label for="tipoNumeroDocumentoRepresentanteLegal">Tipo y Número de Documento de Identidad del represéntate legal, en caso contrario colocar
-            N/A</label>
+            N/A:</label>
           <input type="text" class="form-control" id="tipoNumeroDocumentoRepresentanteLegal" formControlName="tipoNumeroDocumentoRepresentanteLegal">
         </div>
       </div>
@@ -90,7 +107,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="entidadBancaria">Entidad Bancaria</label>
+          <label for="entidadBancaria">Entidad Bancaria:</label>
           <input type="text" class="form-control" id="entidadBancaria" formControlName="entidadBancaria">
         </div>
       </div>
@@ -99,7 +116,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="numeroDeCuenta">Número de Cuenta</label>
+          <label for="numeroDeCuenta">Número de Cuenta:</label>
           <input type="text" class="form-control" id="numeroDeCuenta" formControlName="numeroDeCuenta">
         </div>
       </div>
@@ -108,7 +125,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="tipoDeCuenta">Tipo de cuenta</label>
+          <label for="tipoDeCuenta">Tipo de cuenta:</label>
           <select class="form-control" id="tipoDeCuenta" formControlName="tipoDeCuenta">
             <option value="ahorros">Ahorros.</option>
             <option value="corriente">Corriente.</option>
@@ -134,7 +151,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="direccionPrincipal">Dirección Principal</label>
+          <label for="direccionPrincipal">Dirección Principal:</label>
           <input type="text" class="form-control" id="direccionPrincipal" formControlName="direccionPrincipal">
         </div>
       </div>
@@ -142,7 +159,7 @@
       <br>
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="barrioOSector">Barrio ó sector</label>
+          <label for="barrioOSector">Barrio ó sector:</label>
           <input type="text" class="form-control" id="barrioOSector" formControlName="barrioOSector">
         </div>
       </div>
@@ -151,7 +168,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="municipio">Municipio</label>
+          <label for="municipio">Municipio:</label>
           <input type="text" class="form-control" id="municipio" formControlName="municipio">
         </div>
       </div>
@@ -159,7 +176,7 @@
       <br>
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="departamento">Departamento</label>
+          <label for="departamento">Departamento:</label>
           <input type="text" class="form-control" id="departamento" formControlName="departamento">
         </div>
       </div>
@@ -168,7 +185,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="pais">País</label>
+          <label for="pais">País:</label>
           <input type="text" class="form-control" id="pais" formControlName="pais">
         </div>
       </div>
@@ -182,7 +199,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="numeroDeTelefonoFijoOpcional">Número de teléfono fijo opcional</label>
+          <label for="numeroDeTelefonoFijoOpcional">Número de teléfono fijo opcional:</label>
           <input type="text" class="form-control" id="numeroDeTelefonoFijoOpcional" formControlName="numeroDeTelefonoFijoOpcional">
         </div>
       </div>
@@ -191,7 +208,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="numeroCelularOWhatsapp">Número celular ó whatsapp</label>
+          <label for="numeroCelularOWhatsapp">Número celular ó whatsapp:</label>
           <input type="text" class="form-control" id="numeroCelularOWhatsapp" formControlName="numeroCelularOWhatsapp">
         </div>
       </div>
@@ -200,7 +217,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="correoElectronico">Correo Electrónico</label>
+          <label for="correoElectronico">Correo Electrónico:</label>
           <input type="text" class="form-control" id="correoElectronico" formControlName="correoElectronico">
         </div>
       </div>
@@ -211,7 +228,7 @@
     <div class="row justify-content-center">
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="contactoUnoEjecutivoComercial"> Contacto 1 Ejecutivo Comercial- Nombre y Apellidos completos-Cargo </label>
+          <label for="contactoUnoEjecutivoComercial"> Contacto 1 Ejecutivo Comercial- Nombre y Apellidos completos-Cargo: </label>
           <input type="text" class="form-control" id="contactoUnoEjecutivoComercial" formControlName="contactoUnoEjecutivoComercial">
         </div>
       </div>
@@ -220,7 +237,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="contactoUnoNumero">Número de contacto 1</label>
+          <label for="contactoUnoNumero">Número de contacto 1:</label>
           <input type="text" class="form-control" id="contactoUnoNumero" formControlName="contactoUnoNumero">
         </div>
       </div>
@@ -229,7 +246,7 @@
 
       <div class="col-md-6 mx-auto">
         <div class="form-group">
-          <label for="contactoUnoCorreo"> Correo electrónico contacto 1</label>
+          <label for="contactoUnoCorreo"> Correo electrónico contacto 1:</label>
           <input type="text" class="form-control" id="contactoUnoCorreo" formControlName="contactoUnoCorreo">
         </div>
       </div>
